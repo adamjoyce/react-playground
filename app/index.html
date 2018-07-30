@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>React Playground</title>
   </head>
+
   <body>
     <div id="app"></div>
   </body>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAyj9BUITxPJa5PwM8wD9BB5aVtHbkEEf8",
+      authDomain: "react-playground-78c64.firebaseapp.com",
+      databaseURL: "https://react-playground-78c64.firebaseio.com",
+      projectId: "react-playground-78c64",
+      storageBucket: "react-playground-78c64.appspot.com",
+      messagingSenderId: "677249664728"
+    };
+    firebase.initializeApp(config);
+  </script>
 </html>

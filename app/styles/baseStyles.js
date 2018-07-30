@@ -3,15 +3,18 @@ import {injectGlobal} from 'styled-components';
 const baseStyles = (theme) => injectGlobal`
   html {
     height: 100%;
+    overflow-y: hidden;
   }
 
   body {
     font-family: ${theme.fonts.secondary}
     height: 100%;
+    overflow-y: hidden;
   }
 
   #app {
     height: 100%;
+    overflow-y: hidden;
   }
 
   .slide-enter {
@@ -19,12 +22,12 @@ const baseStyles = (theme) => injectGlobal`
   }
 
   .slide-enter.slide-enter-active {
-    animation: slide-in 250ms 500ms, scale-up 250ms 750ms;
+    animation: slide-in 250ms ease-out 500ms, scale-up 250ms ease-in 750ms;
     animation-fill-mode: forwards;
   }
 
   .slide-exit.slide-exit-active {
-    animation: scale-down 250ms, slide-out 250ms 250ms;
+    animation: scale-down 250ms ease-out, slide-out 250ms ease-in 250ms;
     animation-fill-mode: forwards;
   }
 

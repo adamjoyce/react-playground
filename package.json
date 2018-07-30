@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
+    "start-external": "webpack-dev-server --host 0.0.0.0",
     "build": "NODE_ENV='production' webpack -p",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init",
     "create-docs": "jsdoc app -r -d docs"
   },
   "babel": {
